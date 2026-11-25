@@ -1,0 +1,16 @@
+rank,feature,mean_abs_shap,relative_percent
+1,PSH Flag Count,0.055948,10.48
+2,Fwd Packet Length Mean,0.038111,7.14
+3,Subflow Fwd Bytes,0.036867,6.9
+4,Fwd Packet Length Max,0.03661,6.86
+5,Packet Length Mean,0.033764,6.32
+6,Total Length of Fwd Packets,0.031388,5.88
+7,Avg Fwd Segment Size,0.02412,4.52
+8,ACK Flag Count,0.019922,3.73
+9,Init_Win_bytes_forward,0.01674,3.14
+10,Subflow Bwd Bytes,0.015569,2.92
+11,Bwd Packets/s,0.013723,2.57
+12,Max Packet Length,0.013355,2.5
+13,Average Packet Size,0.013308,2.49
+14,Total Length of Bwd Packets,0.013091,2.45
+15,Flow Duration,0.010205,1.91

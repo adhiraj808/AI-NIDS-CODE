@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.env
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Datasets & Heavy Artifacts (Do not commit raw/processed CSVs or models)
+data/raw/*.csv
+data/processed/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models
+models/trained/*.joblib
+!models/trained/.gitkeep
+
+# Test & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Results & Jupyter
+.ipynb_checkpoints
+results/metrics/*.csv
+results/charts/*.png
+results/reports/*.pdf

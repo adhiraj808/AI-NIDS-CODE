@@ -17,18 +17,29 @@ AI-NIDS ingests network traffic captures, executes data-leakage-free preprocessi
 
 ## Table of Contents
 
-1. [Project Overview](#1-project-overview)
-2. [Research Motivation & Theoretical Framework](#2-research-motivation--theoretical-framework)
-3. [Core Objectives](#3-core-objectives)
-4. [Dataset Specifications (CICIDS2017)](#4-dataset-specifications-cicids2017)
-5. [System Architecture & Project Structure](#5-system-architecture--project-structure)
-6. [Installation & Setup (macOS / Apple Silicon)](#6-installation--setup-macos--apple-silicon)
-7. [Running the Interactive Dashboard](#7-running-the-interactive-dashboard)
-8. [Executing Automated Research Experiments](#8-executing-automated-research-experiments)
-9. [Running Unit Tests](#9-running-unit-tests)
-10. [Interpreting Cybersecurity Evaluation Metrics](#10-interpreting-cybersecurity-evaluation-metrics)
-11. [Explainable AI & Causality Caveats](#11-explainable-ai--causality-caveats)
-12. [Research Limitations & Future Directions](#12-research-limitations--future-directions)
+- [AI-NIDS: AI-Powered Network Intrusion Detection and Threat Analysis System](#ai-nids-ai-powered-network-intrusion-detection-and-threat-analysis-system)
+  - [Table of Contents](#table-of-contents)
+  - [1. Project Overview](#1-project-overview)
+  - [2. Research Motivation \& Theoretical Framework](#2-research-motivation--theoretical-framework)
+  - [3. Core Objectives](#3-core-objectives)
+  - [4. Dataset Specifications (CICIDS2017)](#4-dataset-specifications-cicids2017)
+    - [How to Download Raw CSVs:](#how-to-download-raw-csvs)
+  - [5. System Architecture \& Project Structure](#5-system-architecture--project-structure)
+  - [6. Installation \& Setup (macOS / Apple Silicon)](#6-installation--setup-macos--apple-silicon)
+    - [Step 1: Clone or Navigate to the Project Root](#step-1-clone-or-navigate-to-the-project-root)
+    - [Step 2: Initialize Virtual Environment (Python 3.11)](#step-2-initialize-virtual-environment-python-311)
+    - [Step 3: Upgrade pip and Install Dependencies](#step-3-upgrade-pip-and-install-dependencies)
+  - [7. Running the Interactive Dashboard](#7-running-the-interactive-dashboard)
+    - [Dashboard Navigation:](#dashboard-navigation)
+  - [8. Executing Automated Research Experiments](#8-executing-automated-research-experiments)
+    - [Interactive Research Notebook:](#interactive-research-notebook)
+  - [9. Running Unit Tests](#9-running-unit-tests)
+  - [10. Interpreting Cybersecurity Evaluation Metrics](#10-interpreting-cybersecurity-evaluation-metrics)
+  - [11. Explainable AI \& Causality Caveats](#11-explainable-ai--causality-caveats)
+  - [12. Research Limitations \& Future Directions](#12-research-limitations--future-directions)
+    - [Current Limitations:](#current-limitations)
+    - [Future Directions:](#future-directions)
+  - [Citation](#citation)
 
 ---
 
@@ -232,15 +243,15 @@ tests/test_preprocessing.py::test_transform_unseen_data PASSED
 
 ## 10. Interpreting Cybersecurity Evaluation Metrics
 
-| Metric | Formula | Cybersecurity Operational Significance |
-|---|---|---|
-| **False Negative Rate (FNR)** | $FN / (FN + TP)$ | **Highest Risk.** Missed intrusions that breached the perimeter undetected. |
-| **False Positive Rate (FPR)** | $FP / (FP + TN)$ | Legitimate business sessions flagged as hostile; drives SOC alert fatigue. |
-| **Recall (Sensitivity)** | $TP / (TP + FN)$ | Proportion of total attack campaigns successfully identified. |
-| **Precision** | $TP / (TP + FP)$ | Confidence that an alerted flow is genuinely hostile. |
-| **F1-Score** | $2 \cdot \frac{P \cdot R}{P + R}$ | Harmonic mean balancing precision and recall under severe class imbalance. |
-| **ROC-AUC** | Area under ROC | Global threshold-independent discriminative power across all operational cutoffs. |
-| **Accuracy** | $(TP + TN) / Total$ | **Misleading in IDS.** Can be 99% while missing 100% of attacks in imbalanced captures. |
+| Metric                        | Formula                           | Cybersecurity Operational Significance                                                  |
+| ----------------------------- | --------------------------------- | --------------------------------------------------------------------------------------- |
+| **False Negative Rate (FNR)** | $FN / (FN + TP)$                  | **Highest Risk.** Missed intrusions that breached the perimeter undetected.             |
+| **False Positive Rate (FPR)** | $FP / (FP + TN)$                  | Legitimate business sessions flagged as hostile; drives SOC alert fatigue.              |
+| **Recall (Sensitivity)**      | $TP / (TP + FN)$                  | Proportion of total attack campaigns successfully identified.                           |
+| **Precision**                 | $TP / (TP + FP)$                  | Confidence that an alerted flow is genuinely hostile.                                   |
+| **F1-Score**                  | $2 \cdot \frac{P \cdot R}{P + R}$ | Harmonic mean balancing precision and recall under severe class imbalance.              |
+| **ROC-AUC**                   | Area under ROC                    | Global threshold-independent discriminative power across all operational cutoffs.       |
+| **Accuracy**                  | $(TP + TN) / Total$               | **Misleading in IDS.** Can be 99% while missing 100% of attacks in imbalanced captures. |
 
 ---
 
@@ -274,9 +285,8 @@ In the Explainability module:
 ```bibtex
 @article{nids_academic2026,
   title={AI in Cybersecurity and Defense: Risks, Benefits, and Frameworks},
-  author={Kumar, Akshit},
+  author={Kumar, Akshit, Mishra, Adhiraj, Khantwal, Kavya},
   journal={Academic Research Repository},
   year={2026}
 }
 ```
-# AI-NIDS-CODE

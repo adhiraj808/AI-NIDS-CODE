@@ -1,0 +1,66 @@
+{
+  "experiment_name": "Comprehensive 5-Experiment Suite",
+  "timestamp": "2026-11-16 01:43:28",
+  "experiment_config": {
+    "random_state": 42,
+    "test_size": 0.2
+  },
+  "dataset_meta": {
+    "total_rows": 286467,
+    "total_features": 79,
+    "label_column": "Label",
+    "unique_original_labels": [
+      "PortScan",
+      "BENIGN"
+    ],
+    "estimated_memory_mb": 174.6
+  },
+  "preprocessing_audit": {},
+  "metrics": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.998669,
+      "Precision": 0.998458,
+      "Recall (Sensitivity)": 0.998403,
+      "F1-Score": 0.998431,
+      "ROC-AUC": 0.99957,
+      "False Negative Rate (FNR)": 0.001597,
+      "False Positive Rate (FPR)": 0.001135,
+      "Train Time (s)": 0.2381,
+      "Inference Time (s)": 0.0011,
+      "Throughput (samples/s)": 38330339.2
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.99986,
+      "Precision": 1.0,
+      "Recall (Sensitivity)": 0.99967,
+      "F1-Score": 0.999835,
+      "ROC-AUC": 0.999941,
+      "False Negative Rate (FNR)": 0.00033,
+      "False Positive Rate (FPR)": 0.0,
+      "Train Time (s)": 1.8028,
+      "Inference Time (s)": 0.0289,
+      "Throughput (samples/s)": 1480228.1
+    },
+    {
+      "Model": "Xgboost",
+      "Accuracy": 0.999883,
+      "Precision": 0.999945,
+      "Recall (Sensitivity)": 0.99978,
+      "F1-Score": 0.999862,
+      "ROC-AUC": 0.999936,
+      "False Negative Rate (FNR)": 0.00022,
+      "False Positive Rate (FPR)": 4.1e-05,
+      "Train Time (s)": 11.3181,
+      "Inference Time (s)": 0.035,
+      "Throughput (samples/s)": 1223384.6
+    }
+  ],
+  "findings": [
+    "Top Detection Quality: 'Xgboost' achieved the highest F1-Score of 0.9999, demonstrating superior balanced precision and recall on the held-out test partition.",
+    "Lowest Security Risk: 'Xgboost' produced the lowest False Negative Rate (0.0002). In operational cyber defense, minimizing FNR is paramount as missed attacks leave network perimeters compromised.",
+    "Computational Latency Trade-Off: 'Logistic Regression' exhibited the fastest training time (0.2381s), illustrating the trade-off between architectural complexity and real-time retraining agility.",
+    "Metric Sensitivity: Across evaluated models, accuracy varied by 0.0012 while F1-Score varied by 0.0014, confirming that F1-Score and FNR provide substantially higher diagnostic sensitivity on imbalanced IDS datasets."
+  ]
+}
